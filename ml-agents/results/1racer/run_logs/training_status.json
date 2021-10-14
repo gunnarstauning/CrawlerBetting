@@ -1,0 +1,65 @@
+{
+    "Crawler": {
+        "checkpoints": [
+            {
+                "steps": 1499000,
+                "file_path": "results\\racerCrawler1\\Crawler\\Crawler-1499000.onnx",
+                "reward": 2264.6030232581224,
+                "creation_time": 1634170554.8055668,
+                "auxillary_file_paths": [
+                    "results\\racerCrawler1\\Crawler\\Crawler-1499000.pt"
+                ]
+            },
+            {
+                "steps": 1999000,
+                "file_path": "results\\racerCrawler1\\Crawler\\Crawler-1999000.onnx",
+                "reward": 2028.6539739200048,
+                "creation_time": 1634171359.9143639,
+                "auxillary_file_paths": [
+                    "results\\racerCrawler1\\Crawler\\Crawler-1999000.pt"
+                ]
+            },
+            {
+                "steps": 2160000,
+                "file_path": "results\\racerCrawler1\\Crawler\\Crawler-2160000.onnx",
+                "reward": null,
+                "creation_time": 1634171612.2681952,
+                "auxillary_file_paths": [
+                    "results\\racerCrawler1\\Crawler\\Crawler-2160000.pt"
+                ]
+            },
+            {
+                "steps": 2169000,
+                "file_path": "results\\1racer\\Crawler\\Crawler-2169000.onnx",
+                "reward": 10.335657550228966,
+                "creation_time": 1634191742.6628783,
+                "auxillary_file_paths": [
+                    "results\\1racer\\Crawler\\Crawler-2169000.pt"
+                ]
+            },
+            {
+                "steps": 2190000,
+                "file_path": "results\\1racer\\Crawler\\Crawler-2190000.onnx",
+                "reward": null,
+                "creation_time": 1634192021.1078126,
+                "auxillary_file_paths": [
+                    "results\\1racer\\Crawler\\Crawler-2190000.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 2190000,
+            "file_path": "results\\1racer\\Crawler.onnx",
+            "reward": null,
+            "creation_time": 1634192021.1078126,
+            "auxillary_file_paths": [
+                "results\\1racer\\Crawler\\Crawler-2190000.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}
