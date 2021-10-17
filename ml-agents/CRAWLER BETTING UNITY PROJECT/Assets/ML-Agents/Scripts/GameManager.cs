@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public GameObject phone;
     public Camera mainCamera;
 
-    public float playerMoney;
+    public int playerMoney;
     public Text moneyText;
 
     public float timeBeforeRace = 20f;
@@ -21,6 +21,12 @@ public class GameManager : MonoBehaviour
     public Transform currentView;
     public Transform[] cameras;
     public GameObject[] triggers;
+
+    private int betOnYellow;
+    private int betOnGreen;
+    private int betOnPurple;
+    private int betOnOrange;
+    private int betOnRed;
 
     private string STATE = "BET_STATE";
 
@@ -63,10 +69,56 @@ public class GameManager : MonoBehaviour
         
     }
 
-    public void Bet ()
+    //purple orange red
+
+    public void BetYellow()
     {
-        playerMoney -= 10;
-        UpdateMoney();
+        if (playerMoney > 0)
+        {
+            playerMoney -= 10;
+            betOnYellow += 10;
+            UpdateMoney();
+        }
+    }
+
+    public void BetGreen() 
+    {
+        if (playerMoney > 0)
+        {
+            playerMoney -= 10;
+            betOnGreen += 10;
+            UpdateMoney();
+        }
+    }
+
+    public void BetPurple()
+    {
+        if (playerMoney > 0)
+        {
+            playerMoney -= 10;
+            betOnPurple += 10;
+            UpdateMoney();
+        }
+    }
+
+    public void BetOrange() 
+    {
+        if (playerMoney > 0)
+        {
+            playerMoney -= 10;
+            betOnOrange += 10;
+            UpdateMoney();
+        }
+    }
+
+    public void BetRed() 
+    {
+        if (playerMoney > 0)
+        {
+            playerMoney -= 10;
+            betOnRed += 10;
+            UpdateMoney();
+        }
     }
 
     private void BeginRace() 
@@ -131,10 +183,49 @@ public class GameManager : MonoBehaviour
         other.gameObject.SetActive(false);
     }
 
+    public void RaceWinner(string winner) 
+    {
+        switch(winner)
+        {
+            case "Yellow":
+                playerMoney += 2*betOnYellow;
+                break;
+            case "Green":
+                playerMoney += 2*betOnGreen;
+                break;
+            case "Purple":
+                playerMoney += 2*betOnPurple;
+                break;
+            case "Orange":
+                playerMoney += 2*betOnOrange;
+                break;
+            case "Red":
+                playerMoney += 2*betOnRed;
+                break;
+            default:
+                Debug.Log("ERROR: Add Money Failed");
+                break;
+        }
+        ResetRace();
+    }
+
     private void ResetRace()
     {
+        Vector3 currentPosition = new Vector3(85.5f, 16.71f, 78f);
+        mainCamera.transform.position = currentPosition;
+        Vector3 currentAngle = new Vector3 (0f, -133.514f, 0f);
+        mainCamera.transform.eulerAngles = currentAngle;
+
         phone.SetActive(true);
         time=timeBeforeRace;
+
+        STATE = "BET_STATE";
+        UpdateMoney();
+
+        foreach (GameObject Trigger in triggers) 
+        {
+            Trigger.gameObject.SetActive(true);
+        }
     }
 
     private void UpdateMoney() 
