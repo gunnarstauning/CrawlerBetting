@@ -108,7 +108,7 @@ public class CrawlerAgent : Agent
     }*/
     public void FindNextTarget()
     {
-        if(targetNum < 13)
+        if(targetNum < targets.Length + 1)
         {
             m_Target = targets[targetNum - 1];
         }
