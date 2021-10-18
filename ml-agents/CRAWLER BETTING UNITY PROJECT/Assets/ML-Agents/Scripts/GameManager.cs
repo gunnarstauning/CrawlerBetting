@@ -28,6 +28,12 @@ public class GameManager : MonoBehaviour
     private int betOnOrange;
     private int betOnRed;
 
+    public GameObject Yellow;
+    public GameObject Green;
+    public GameObject Purple;
+    public GameObject Orange;
+    public GameObject Red;
+
     private string STATE = "BET_STATE";
 
     // Start is called before the first frame update
@@ -211,6 +217,8 @@ public class GameManager : MonoBehaviour
 
     private void ResetRace()
     {
+
+
         Vector3 currentPosition = new Vector3(85.5f, 16.71f, 78f);
         mainCamera.transform.position = currentPosition;
         Vector3 currentAngle = new Vector3 (0f, -133.514f, 0f);

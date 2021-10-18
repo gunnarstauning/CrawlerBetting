@@ -2819,6 +2819,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 205295710}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &211244659 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4845971001588102158, guid: 0456c89e8c9c243d595b039fe7aa0bf9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1843417086}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &216151110
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4907,6 +4913,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 413408460}
   m_CullTransparentMesh: 0
+--- !u!1 &414305305 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4845971001588102158, guid: 0456c89e8c9c243d595b039fe7aa0bf9,
+    type: 3}
+  m_PrefabInstance: {fileID: 992549654}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &432078735
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8172,6 +8184,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 470896, guid: c107d6218da3747479b38075e3042255,
     type: 3}
   m_PrefabInstance: {fileID: 674335855}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &676233420 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4845971001588102158, guid: 0456c89e8c9c243d595b039fe7aa0bf9,
+    type: 3}
+  m_PrefabInstance: {fileID: 451089957}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &680366975
 PrefabInstance:
@@ -12155,6 +12173,12 @@ Transform:
   m_Father: {fileID: 1350672493}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &1076116742 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4845971001588102158, guid: 0456c89e8c9c243d595b039fe7aa0bf9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1860021986}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1076690323
 GameObject:
   m_ObjectHideFlags: 0
@@ -12366,6 +12390,11 @@ MonoBehaviour:
   - {fileID: 26137949}
   - {fileID: 1220941500}
   - {fileID: 1878391927}
+  Yellow: {fileID: 1076116742}
+  Green: {fileID: 676233420}
+  Purple: {fileID: 414305305}
+  Orange: {fileID: 211244659}
+  Red: {fileID: 1919555266}
 --- !u!4 &1131732126
 Transform:
   m_ObjectHideFlags: 0
@@ -20229,6 +20258,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 441386, guid: ab5e0beb1c36778479983f28b65d97dd,
     type: 3}
   m_PrefabInstance: {fileID: 1907202868}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1919555266 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4845971001588102158, guid: 0456c89e8c9c243d595b039fe7aa0bf9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1835307767}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1936929907
 GameObject:
