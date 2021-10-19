@@ -229,7 +229,7 @@ public class CrawlerAgent : Agent
 
     void FixedUpdate()
     {
-        Debug.Log(targetNum + gameObject.name);
+        //Debug.Log(targetNum + gameObject.name);
         UpdateOrientationObjects();
         // If enabled the feet will light up green when the foot is grounded.
         // This is just a visualization and isn't necessary for function

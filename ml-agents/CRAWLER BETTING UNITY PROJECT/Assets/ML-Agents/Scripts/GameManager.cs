@@ -11,6 +11,10 @@ public class GameManager : MonoBehaviour
     public int playerMoney;
     public Text moneyText;
 
+    public Text resultText;
+    public Text playerWinningsText;
+    private int playerPrevMoney;
+
     public float timeBeforeRace = 20f;
     public float time = 20f;
     public Text timeText;
@@ -42,6 +46,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         UpdateMoney();
+        playerPrevMoney = playerMoney;
     }
 
     // Update is called once per frame
@@ -76,8 +81,6 @@ public class GameManager : MonoBehaviour
         }
         
     }
-
-    //purple orange red
 
     public void BetYellow()
     {
@@ -216,6 +219,22 @@ public class GameManager : MonoBehaviour
                 Debug.Log("ERROR: Add Money Failed");
                 break;
         }
+        resultText.text = "Last Race Winner: " + winner;
+        
+        int moneyChange = playerMoney-playerPrevMoney;
+        if (moneyChange > 0)
+        {
+            playerWinningsText.text = "You won " + moneyChange + "$";
+            playerWinningsText.color = Color.green;
+        } else if (moneyChange < 0)
+        {
+            playerWinningsText.text = "You lost " + moneyChange + "$";
+            playerWinningsText.color = Color.red;
+        } else if (moneyChange == 0)
+        {
+            playerWinningsText.text = "You went even that race";
+            playerWinningsText.color = Color.white;
+        }
         ResetRace();
     }
 
@@ -251,10 +270,18 @@ public class GameManager : MonoBehaviour
         STATE = "BET_STATE";
         UpdateMoney();
 
+        betOnYellow = 0;
+        betOnGreen = 0;
+        betOnPurple = 0;
+        betOnOrange = 0;
+        betOnRed = 0;
+
         foreach (GameObject Trigger in triggers) 
         {
             Trigger.gameObject.SetActive(true);
         }
+
+        playerPrevMoney = playerMoney;
     }
 
     private void UpdateMoney() 
