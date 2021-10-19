@@ -33,6 +33,8 @@ public class GameManager : MonoBehaviour
     public GameObject Purple;
     public GameObject Orange;
     public GameObject Red;
+    private Vector3 resetPosition = new Vector3(-74.2f, 0.15f, -0.5f);
+    private Vector3 resetRotation = new Vector3(0f, -174.82f, 0f);
 
     private string STATE = "BET_STATE";
 
@@ -129,6 +131,7 @@ public class GameManager : MonoBehaviour
 
     private void BeginRace() 
     {
+        Time.timeScale = 5.0f;
         time = timeBeforeRace;
         //RacerMovement raceMovement = racers[0].GetComponent<RacerMovement>();
         foreach(GameObject racer in racers)
@@ -191,6 +194,7 @@ public class GameManager : MonoBehaviour
 
     public void RaceWinner(string winner) 
     {
+        Time.timeScale = 1.0f;
         switch(winner)
         {
             case "Yellow":
@@ -217,7 +221,23 @@ public class GameManager : MonoBehaviour
 
     private void ResetRace()
     {
+        Yellow.transform.localPosition = resetPosition;
+        Green.transform.localPosition = resetPosition;
+        Purple.transform.localPosition = resetPosition;
+        Orange.transform.localPosition = resetPosition;
+        Red.transform.localPosition = resetPosition;
 
+        Yellow.transform.eulerAngles = resetRotation;
+        Green.transform.eulerAngles = resetRotation;
+        Purple.transform.eulerAngles = resetRotation;
+        Orange.transform.eulerAngles = resetRotation;
+        Red.transform.eulerAngles = resetRotation;
+
+        foreach(GameObject racer in racers)
+        {
+            //racer.transform.localPosition = resetPosition;
+            racer.GetComponentInChildren<Rigidbody>().isKinematic = true;
+        }
 
         Vector3 currentPosition = new Vector3(85.5f, 16.71f, 78f);
         mainCamera.transform.position = currentPosition;
