@@ -119,6 +119,11 @@ public class CrawlerAgent : Agent
         }
         
     }
+    public void ResetTargetCount()
+    {
+        targetNum = 1;
+        FindNextTarget();
+    }
 
     /// <summary>
     /// Loop over body parts and reset them to initial conditions.

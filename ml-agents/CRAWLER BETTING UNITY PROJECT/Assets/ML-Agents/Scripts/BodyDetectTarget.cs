@@ -25,4 +25,8 @@ public class BodyDetectTarget : MonoBehaviour
             gameManager.changeCamera(other);
         }
     }
+    public void ResetTargetNum()
+    {
+        agent.targetNum = 1;
+    }
 }

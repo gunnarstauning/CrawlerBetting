@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
     public GameObject Orange;
     public GameObject Red;
     private Vector3 resetPosition = new Vector3(-74.2f, 0.15f, -0.5f);
-    private Vector3 resetRotation = new Vector3(0f, -174.82f, 0f);
+    private Vector3 resetRotation = new Vector3(0f, 180f, 0f);
 
     private string STATE = "BET_STATE";
 
@@ -237,6 +237,7 @@ public class GameManager : MonoBehaviour
         {
             //racer.transform.localPosition = resetPosition;
             racer.GetComponentInChildren<Rigidbody>().isKinematic = true;
+            racer.GetComponent<CrawlerAgent>().ResetTargetCount();
         }
 
         Vector3 currentPosition = new Vector3(85.5f, 16.71f, 78f);
