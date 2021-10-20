@@ -143,7 +143,7 @@ public class CrawlerAgent : Agent
         UpdateOrientationObjects();
 
         //Set our goal walking speed
-        TargetWalkingSpeed = Random.Range(0.1f, m_maxWalkingSpeed);
+        //TargetWalkingSpeed = Random.Range(0.1f, m_maxWalkingSpeed);
     }
 
     /// <summary>
