@@ -5010,7 +5010,7 @@ PrefabInstance:
     - target: {fileID: 4845971001715176651, guid: 0456c89e8c9c243d595b039fe7aa0bf9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.445407
+      value: -7.39
       objectReference: {fileID: 0}
     - target: {fileID: 4845971001715176651, guid: 0456c89e8c9c243d595b039fe7aa0bf9,
         type: 3}
@@ -13114,6 +13114,12 @@ MonoBehaviour:
   - {fileID: 289885817}
   - {fileID: 132262893}
   - {fileID: 1644528306}
+  racerBodies:
+  - {fileID: 1076116742}
+  - {fileID: 676233420}
+  - {fileID: 414305305}
+  - {fileID: 211244659}
+  - {fileID: 1919555266}
   transitionSpeed: 1
   currentView: {fileID: 963194228}
   cameras:
@@ -20367,7 +20373,7 @@ PrefabInstance:
     - target: {fileID: 4845971001715176651, guid: 0456c89e8c9c243d595b039fe7aa0bf9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.445407
+      value: -7.5
       objectReference: {fileID: 0}
     - target: {fileID: 4845971001715176651, guid: 0456c89e8c9c243d595b039fe7aa0bf9,
         type: 3}
@@ -20782,7 +20788,7 @@ PrefabInstance:
     - target: {fileID: 4845971001715176651, guid: 0456c89e8c9c243d595b039fe7aa0bf9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.445407
+      value: -7.62
       objectReference: {fileID: 0}
     - target: {fileID: 4845971001715176651, guid: 0456c89e8c9c243d595b039fe7aa0bf9,
         type: 3}
@@ -21222,7 +21228,7 @@ PrefabInstance:
     - target: {fileID: 4845971001715176651, guid: 0456c89e8c9c243d595b039fe7aa0bf9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.445407
+      value: -7.59
       objectReference: {fileID: 0}
     - target: {fileID: 4845971001715176651, guid: 0456c89e8c9c243d595b039fe7aa0bf9,
         type: 3}

@@ -233,7 +233,7 @@ namespace Unity.MLAgentsExamples
                 }
             }
 
-            m_NumSteps++;
+            //m_NumSteps++;
         }
 
         public NNModel GetModelForBehaviorName(string behaviorName)

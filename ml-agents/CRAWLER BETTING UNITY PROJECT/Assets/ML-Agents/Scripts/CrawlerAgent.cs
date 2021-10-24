@@ -43,6 +43,9 @@ public class CrawlerAgent : Agent
     //Body Detection of Targets
     private BodyDetectTarget bodyDetection;
 
+    //Current Y Rotation
+    private Transform currentY;
+
     [Header("Body Parts")] [Space(10)] public Transform body;
     public Transform leg0Upper;
     public Transform leg0Lower;
@@ -134,16 +137,10 @@ public class CrawlerAgent : Agent
         foreach (var bodyPart in m_JdController.bodyPartsDict.Values)
         {
             //bodyPart.Reset(bodyPart);
-            
         }
 
-        //Random start rotation to help generalize
-        body.rotation = Quaternion.Euler(0, 0, 0);
-
+        //body.rotation = Quaternion.Euler(0, 0, 0);
         UpdateOrientationObjects();
-
-        //Set our goal walking speed
-        //TargetWalkingSpeed = Random.Range(0.1f, m_maxWalkingSpeed);
     }
 
     /// <summary>
@@ -229,7 +226,6 @@ public class CrawlerAgent : Agent
 
     void FixedUpdate()
     {
-        //Debug.Log(targetNum + gameObject.name);
         UpdateOrientationObjects();
         // If enabled the feet will light up green when the foot is grounded.
         // This is just a visualization and isn't necessary for function
@@ -262,7 +258,6 @@ public class CrawlerAgent : Agent
 
         AddReward(matchSpeedReward * lookAtTargetReward);
     }
-
     /// <summary>
     /// Update OrientationCube and DirectionIndicator
     /// </summary>
