@@ -134,7 +134,7 @@ public class GameManager : MonoBehaviour
 
     private void BeginRace() 
     {
-        Time.timeScale = 5.0f;
+        Time.timeScale = 3.0f;
         time = timeBeforeRace;
         //RacerMovement raceMovement = racers[0].GetComponent<RacerMovement>();
         foreach(GameObject racer in racers)
